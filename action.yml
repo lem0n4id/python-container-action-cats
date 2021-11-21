@@ -1,6 +1,6 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'Greet issues'
+description: 'This action will greet people when they create a new issue'
+author: 'Lenin'
 inputs: 
   myInput:
     description: 'Input to use'
