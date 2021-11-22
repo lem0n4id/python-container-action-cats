@@ -28,7 +28,8 @@ GITHUB_WORKFLOW:str
 GITHUB_WORKSPACE:str
 
 # job.container.id
-GITHUB_JOB_CONTAINER_ID = os.environ["JOB_CONTAINER_ID"]
+GITHUB_EVENT = os.environ["GITHUB_EVENT"]
 
 if __name__ == "__main__":
-    print(F"{GITHUB_JOB_CONTAINER_ID} is the id of currently running job")
+    for i in GITHUB_EVENT:
+        print(i,GITHUB_EVENT[i])
