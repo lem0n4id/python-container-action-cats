@@ -16,3 +16,5 @@ jobs:
       - name: Hello world
         run: |
           python3 main.py
+      - name: test job context
+        run: "echo ${{ job.container.id }}"
