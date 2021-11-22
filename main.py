@@ -1,6 +1,34 @@
 import os
 
-GITHUB_ACTION = os.environ["GITHUB_ACTOR"]
+
+# github context
+GITHUB:object
+GITHUB_ACTION:str
+GITHUB_ACTION_PATH:str
+GITHUB_ACTOR:str
+GITHUB_BASE_REF:str
+GITHUB_EVENT:object
+GITHUB_EVENT_NAME:str
+GITHUB_EVENT_PATH:str
+GITHUB_HEAD_REF:str
+GITHUB_JOB:str
+GITHUB_REF:str
+GITHUB_REF_NAME:str
+GITHUB_REF_PROTECTED:str
+GITHUB_REF_TYPE:str
+GITHUB_REPOSITORY:str
+GITHUB_REPOSITORY_OWNER:str
+GITHUB_RUN_ID:str
+GITHUB_RUN_NUMBER:int
+GITHUB_RUN_ATTEMPT:int
+GITHUB_SERVER_URL:str
+GITHUB_SHA:str
+GITHUB_TOKEN:str
+GITHUB_WORKFLOW:str
+GITHUB_WORKSPACE:str
+
+# job.container.id
+GITHUB_JOB_CONTAINER_ID = os.environ["GITHUB_JOB_CONTAINER_ID"]
 
 if __name__ == "__main__":
-    print(F"{GITHUB_ACTION} initiated the workflow")
+    print(F"{GITHUB_JOB_CONTAINER_ID} is the id of currently running job")
