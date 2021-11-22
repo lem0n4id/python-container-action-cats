@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: test job context
+        run: "echo ${{ job.container.id }}"
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
@@ -16,5 +18,3 @@ jobs:
       - name: Hello world
         run: |
           python3 main.py
-      - name: test job context
-        run: "echo ${{ job.container.id }}"
