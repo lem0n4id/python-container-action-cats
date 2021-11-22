@@ -28,7 +28,7 @@ GITHUB_WORKFLOW:str
 GITHUB_WORKSPACE:str
 
 # job.container.id
-GITHUB_JOB_CONTAINER_ID = os.environ["GITHUB_JOB_CONTAINER_ID"]
+GITHUB_JOB_CONTAINER_ID = os.environ["JOB_CONTAINER_ID"]
 
 if __name__ == "__main__":
     print(F"{GITHUB_JOB_CONTAINER_ID} is the id of currently running job")
