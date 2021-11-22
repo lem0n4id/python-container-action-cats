@@ -28,7 +28,16 @@ GITHUB_WORKFLOW:str
 GITHUB_WORKSPACE:str
 
 # job.container.id
-GITHUB_EVENT = os.environ["GITHUB_EVENT_NAME"]
+# GITHUB_EVENT = os.environ["GITHUB_EVENT_NAME"]
 
 if __name__ == "__main__":
-    print(GITHUB_EVENT)
+    # print(GITHUB_EVENT)
+    from github import Github
+    import os
+    from pprint import pprint
+
+    token = os.getenv('GITHUB_TOKEN', '...')
+    g = Github(token)
+    repo = g.get_repo("lem0n4id/python-container-action-cats")
+    issues = repo.get_issues(state="open")
+    pprint(issues.get_page(0))
