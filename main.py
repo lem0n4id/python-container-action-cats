@@ -28,7 +28,7 @@ GITHUB_WORKFLOW:str
 GITHUB_WORKSPACE:str
 
 # job.container.id
-GITHUB_EVENT = os.environ["GITHUB_EVENT_NAMES"]
+GITHUB_EVENT = os.environ["GITHUB_EVENT_NAME"]
 
 if __name__ == "__main__":
     print(GITHUB_EVENT)
